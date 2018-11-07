@@ -107,7 +107,7 @@ function! nvimdev#init(path) abort
 
   let linter = neomake#makers#ft#lua#luacheck()
   call extend(linter, {
-        \ 'exe': s:path . '/.deps/usr/bin/luacheck',
+        \ 'exe': 'luacheck',
         \ 'cwd': s:path . '/test',
         \ 'remove_invalid_entries': 1,
         \ })
