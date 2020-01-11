@@ -154,6 +154,7 @@ function! s:setup_neomake() abort
   let s:tmp_efm='%-Gninja: Entering directory `.deps'',' . &errorformat
   let g:neomake_make_maker = {
         \ 'exe': 'make',
+        \ 'cwd': './build',
         \ 'args': ['VERBOSE=1'],
         \ 'errorformat': s:tmp_efm,
         \ 'remove_invalid_entries': get(g:, 'neomake_remove_invalid_entries', 0)
